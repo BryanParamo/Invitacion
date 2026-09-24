@@ -1,598 +1,704 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Boda Lupita & Fer | 28.10.2026</title>
-
-    <!-- Tipografías elegantes y estilo western refinado -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
-      rel="stylesheet"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Boda Lupita & Fer | 28.10.2026</title>
+  
+  <!-- Tipografías elegantes y estilo western refinado -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  
 
     <!-- Open Graph para vista previa en WhatsApp y redes -->
-    <meta property="og:type" content="website" />
-    <meta property="og:title" content="¡Nuestra Boda! Lupita & Fer" />
-    <meta
-      property="og:description"
-      content="28 de Octubre, 2026. Acompáñanos a celebrar este día tan especial."
-    />
-    <meta
-      property="og:image"
-      content="https://tu-sitio.netlify.app/fotos/1.jpeg"
-    />
-    <meta property="og:url" content="https://tu-sitio.netlify.app" />
+<!-- Open Graph para vista previa en WhatsApp y redes -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="¡Nuestra Boda! Lupita & Fer" />
+<meta property="og:description" content="28 de Octubre, 2026. Acompáñanos a celebrar este día tan especial." />
+<meta property="og:image" content="https://invitacion-wine-iota.vercel.app/1.jpeg" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:url" content="https://invitacion-wine-iota.vercel.app" />
 
-    <style>
-      :root {
-        --bg-cream: #f9f6f0;
-        --card-white: #ffffff;
-        --rustic-brown: #3e2723;
-        --leather: #8d6e63;
-        --sand-gold: #c5a059;
-        --light-sand: #f0ebe1;
-        --dark-text: #2c2523;
-      }
 
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
+  <style>
+    :root {
+      --bg-cream: #f9f6f0;
+      --card-white: #ffffff;
+      --rustic-brown: #3e2723;
+      --leather: #8d6e63;
+      --sand-gold: #c5a059;
+      --light-sand: #f0ebe1;
+      --dark-text: #2c2523;
+    }
 
-      body {
-        background-color: #2b2624;
-        font-family: "Montserrat", sans-serif;
-        color: var(--dark-text);
-        display: flex;
-        justify-content: center;
-        min-height: 100vh;
-      }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-      /* Contenedor formato móvil */
-      .mobile-wrapper {
-        width: 100%;
-        max-width: 480px;
-        background-color: var(--bg-cream);
-        box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
-        position: relative;
-        overflow-x: hidden;
-        min-height: 100vh;
-      }
+    body {
+      background-color: #2b2624;
+      font-family: 'Montserrat', sans-serif;
+      color: var(--dark-text);
+      display: flex;
+      justify-content: center;
+      min-height: 100vh;
+    }
 
-      /* PANTALLA INICIAL (Sobre vaquero / Sello) */
-      #sobre-screen {
-        position: fixed;
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100%;
-        max-width: 480px;
-        height: 100vh;
-        background: radial-gradient(circle, #f3ece1 0%, #e2d7c5 100%);
-        z-index: 1000;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        padding: 30px;
-        transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
-      }
+    /* Contenedor formato móvil */
+    .mobile-wrapper {
+      width: 100%;
+      max-width: 480px;
+      background-color: var(--bg-cream);
+      box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
 
-      .sobre-monograma {
-        font-family: "Cinzel", serif;
-        font-size: 3.8rem;
-        letter-spacing: 6px;
-        color: var(--rustic-brown);
-        margin-bottom: 5px;
-      }
+    /* Pantalla inicial tipo Sobre */
+    #sobre-screen {
+      position: fixed;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 100%;
+      max-width: 480px;
+      height: 100vh;
+      background: radial-gradient(circle, #f3ece1 0%, #e2d7c5 100%);
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 30px;
+      transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 
-      .sobre-star {
-        color: var(--sand-gold);
-        font-size: 1.5rem;
-        margin-bottom: 15px;
-      }
+    .sobre-monograma {
+      font-family: 'Cinzel', serif;
+      font-size: 3.8rem;
+      letter-spacing: 6px;
+      color: var(--rustic-brown);
+      margin-bottom: 5px;
+    }
 
-      .sobre-fecha {
-        font-size: 0.9rem;
-        letter-spacing: 4px;
-        color: var(--leather);
-        text-transform: uppercase;
-        font-weight: 500;
-        margin-bottom: 35px;
-      }
+    .sobre-star {
+      color: var(--sand-gold);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
 
-      .btn-abrir {
-        background: linear-gradient(135deg, #a07855, #6d4c41);
-        color: #fff;
-        border: none;
-        padding: 15px 36px;
-        font-size: 0.85rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        border-radius: 30px;
-        cursor: pointer;
-        box-shadow: 0 6px 16px rgba(109, 76, 65, 0.35);
-        transition: transform 0.2s ease;
-      }
+    .sobre-fecha {
+      font-size: 0.9rem;
+      letter-spacing: 4px;
+      color: var(--leather);
+      text-transform: uppercase;
+      font-weight: 500;
+      margin-bottom: 35px;
+    }
 
-      .btn-abrir:active {
-        transform: scale(0.96);
-      }
+    .btn-abrir {
+      background: linear-gradient(135deg, #a07855, #6d4c41);
+      color: #fff;
+      border: none;
+      padding: 15px 36px;
+      font-size: 0.85rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      border-radius: 30px;
+      cursor: pointer;
+      box-shadow: 0 6px 16px rgba(109, 76, 65, 0.35);
+      transition: transform 0.2s ease;
+    }
 
-      /* BOTÓN FLOTANTE DE MÚSICA */
-      #music-control {
-        position: fixed;
-        bottom: 20px;
-        right: 20px;
-        background: rgba(255, 255, 255, 0.9);
-        border: 1px solid var(--sand-gold);
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 900;
-        cursor: pointer;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-        font-size: 1.1rem;
-      }
+    .btn-abrir:active {
+      transform: scale(0.96);
+    }
 
-      /* IMÁGENES & ESTILO */
-      .foto-cover {
-        width: 100%;
-        height: 430px;
-        object-fit: cover;
-        display: block;
-        mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
-        -webkit-mask-image: linear-gradient(
-          to bottom,
-          black 85%,
-          transparent 100%
-        );
-      }
+    /* Botón flotante de audio */
+    #music-control {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid var(--sand-gold);
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 900;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      font-size: 1.1rem;
+    }
 
-      .section {
-        padding: 38px 24px;
-        text-align: center;
-        position: relative;
-      }
+    .foto-cover {
+      width: 100%;
+      height: 440px;
+      object-fit: cover;
+      display: block;
+      mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+      -webkit-mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+    }
 
-      .cinzel-title {
-        font-family: "Cinzel", serif;
-        letter-spacing: 4px;
-        color: var(--rustic-brown);
-        text-transform: uppercase;
-        font-weight: 600;
-      }
+    .section {
+      padding: 34px 24px;
+      text-align: center;
+      position: relative;
+    }
 
-      .script-font {
-        font-family: "Great Vibes", cursive;
-        font-size: 2.3rem;
-        color: var(--sand-gold);
-        margin: 4px 0;
-      }
+    .cinzel-title {
+      font-family: 'Cinzel', serif;
+      letter-spacing: 4px;
+      color: var(--rustic-brown);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
 
-      .divisor-western {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 12px;
-        margin: 18px auto;
-        color: var(--sand-gold);
-      }
-      .divisor-western::before,
-      .divisor-western::after {
-        content: "";
-        width: 50px;
-        height: 1px;
-        background: var(--sand-gold);
-      }
+    .script-font {
+      font-family: 'Great Vibes', cursive;
+      font-size: 2.3rem;
+      color: var(--sand-gold);
+      margin: 4px 0;
+    }
 
-      /* SECCIÓN CONTADOR (Con Foto 3) */
-      .countdown-section {
-        position: relative;
-        background: url("3.jpeg") center/cover no-repeat;
-        padding: 60px 20px;
-        color: #fff;
-        text-align: center;
-      }
+    .divisor-western {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      margin: 16px auto;
+      color: var(--sand-gold);
+    }
+    .divisor-western::before, .divisor-western::after {
+      content: "";
+      width: 50px;
+      height: 1px;
+      background: var(--sand-gold);
+    }
 
-      .countdown-overlay {
-        position: absolute;
-        inset: 0;
-        background: rgba(30, 20, 15, 0.65);
-      }
+    /* 5. ESTILO SAVE THE DATE LATERAL */
+    .save-the-date-container {
+      display: flex;
+      align-items: center;
+      padding: 10px 24px;
+      gap: 18px;
+    }
 
-      .countdown-content {
-        position: relative;
-        z-index: 2;
-      }
+    .std-foto {
+      flex: 1;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
 
-      .countdown-grid {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        margin-top: 20px;
-      }
+    .std-lateral {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+    }
 
-      .timer-card {
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(6px);
-        border: 1px solid rgba(255, 255, 255, 0.3);
-        padding: 12px 10px;
-        border-radius: 10px;
-        min-width: 65px;
-      }
+    .std-vertical-text {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-family: 'Cinzel', serif;
+      font-size: 0.75rem;
+      letter-spacing: 6px;
+      color: var(--leather);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
 
-      .timer-num {
-        font-size: 1.5rem;
-        font-weight: 700;
-        font-family: "Cinzel", serif;
-      }
+    .std-numeros {
+      font-family: 'Cinzel', serif;
+      font-size: 2.2rem;
+      line-height: 1;
+      color: var(--rustic-brown);
+      text-align: center;
+    }
 
-      .timer-txt {
-        font-size: 0.65rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        opacity: 0.85;
-      }
+    .std-divider {
+      width: 30px;
+      height: 1.5px;
+      background: var(--sand-gold);
+      margin: 4px auto;
+    }
 
-      /* TARJETAS DE DETALLES */
-      .card-evento {
-        background: var(--card-white);
-        border-radius: 14px;
-        padding: 24px;
-        margin-bottom: 22px;
-        box-shadow: 0 4px 14px rgba(62, 39, 35, 0.06);
-        border-top: 3px solid var(--sand-gold);
-      }
+    /* CONTADOR CON FOTO 3 DE FONDO */
+    .countdown-section {
+      position: relative;
+      background: url('3.jpeg') center/cover no-repeat;
+      padding: 55px 20px;
+      color: #fff;
+      text-align: center;
+    }
 
-      .btn-maps {
-        display: inline-block;
-        margin-top: 14px;
-        padding: 9px 24px;
-        background: transparent;
-        color: var(--leather);
-        border: 1.5px solid var(--leather);
-        text-decoration: none;
-        border-radius: 20px;
-        font-size: 0.75rem;
-        letter-spacing: 2px;
-        text-transform: uppercase;
-        font-weight: 600;
-        transition: all 0.2s;
-      }
+    .countdown-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(30, 20, 15, 0.65);
+    }
 
-      .btn-maps:hover {
-        background: var(--leather);
-        color: #fff;
-      }
+    .countdown-content {
+      position: relative;
+      z-index: 2;
+    }
 
-      /* CÓDIGO DE VESTIMENTA */
-      .color-swatches {
-        display: flex;
-        justify-content: center;
-        gap: 12px;
-        margin: 15px 0;
-      }
-      .swatch {
-        width: 32px;
-        height: 32px;
-        border-radius: 50%;
-        border: 2px solid #ddd;
-      }
-    </style>
-  </head>
-  <body>
-    <!-- Botón de música flotante -->
-    <div id="music-control" style="display: none" title="Pausar/Reproducir">
-      🎵
+    .countdown-grid {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: 18px;
+    }
+
+    .timer-card {
+      background: rgba(255, 255, 255, 0.15);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 12px 10px;
+      border-radius: 10px;
+      min-width: 65px;
+    }
+
+    .timer-num {
+      font-size: 1.5rem;
+      font-weight: 700;
+      font-family: 'Cinzel', serif;
+    }
+
+    .timer-txt {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      opacity: 0.85;
+    }
+
+    /* 4. ITINERARIO VERTICAL LIMPIO */
+    .timeline-container {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      max-width: 320px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .timeline-item {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      background: var(--card-white);
+      padding: 16px 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 12px rgba(62, 39, 35, 0.05);
+      border-left: 3px solid var(--sand-gold);
+    }
+
+    .timeline-icon {
+      font-size: 2rem;
+      min-width: 40px;
+      text-align: center;
+    }
+
+    .btn-ubicacion {
+      display: inline-block;
+      margin-top: 6px;
+      font-size: 0.7rem;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--sand-gold);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    /* 2. CARRUSEL TÁCTIL INTERACTIVO */
+    .carousel-container {
+      position: relative;
+      width: 100%;
+      max-width: 440px;
+      margin: 0 auto;
+      overflow: hidden;
+      border-radius: 14px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    }
+
+    .carousel-track {
+      display: flex;
+      transition: transform 0.4s ease-in-out;
+      width: 100%;
+    }
+
+    .carousel-slide {
+      min-width: 100%;
+      height: 380px;
+    }
+
+    .carousel-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .carousel-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .dot {
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #d4c8be;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .dot.active {
+      background: var(--sand-gold);
+      width: 22px;
+      border-radius: 6px;
+    }
+
+    /* Código de vestimenta */
+    .color-swatches {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin: 15px 0;
+    }
+    .swatch {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      border: 2px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Control flotante de audio -->
+  <div id="music-control" style="display: none;" title="Pausar/Reproducir">🎵</div>
+
+  <div class="mobile-wrapper">
+
+    <!-- Pantalla del Sobre inicial -->
+    <div id="sobre-screen">
+      <div class="sobre-monograma">L & F</div>
+      <div class="sobre-star">★</div>
+      <p class="sobre-fecha">28 · OCTUBRE · 2026</p>
+      <button class="btn-abrir" id="btn-abrir">Abrir Invitación</button>
     </div>
 
-    <div class="mobile-wrapper">
-      <!-- 1. Pantalla del Sobre inicial -->
-      <div id="sobre-screen">
-        <div class="sobre-monograma">L & F</div>
-        <div class="sobre-star">★</div>
-        <p class="sobre-fecha">28 · OCTUBRE · 2026</p>
-        <button class="btn-abrir" id="btn-abrir">Abrir Invitación</button>
-      </div>
+    <!-- Pista de Audio -->
+    <audio id="audio-novios" loop>
+      <source src="Alex Warren - Ordinary.mp3" type="audio/mp3">
+    </audio>
 
-      <!-- Audio -->
-      <audio id="audio-novios" loop>
-        <source src="Alex Warren - Ordinary.mp3" type="audio/mp3" />
-      </audio>
+    <!-- Portada (Foto 1) -->
+    <img src="1.jpeg" alt="Lupita y Fer" class="foto-cover">
 
-      <!-- 2. Portada (Foto 1) -->
-      <img
-        src="1.jpeg"
-        alt="Lupita y Fer"
-        class="foto-cover"
-      />
+    <div class="section">
+      <p style="letter-spacing: 4px; font-size: 0.8rem; color: var(--leather); text-transform: uppercase;">Los invitamos a nuestra</p>
+      <h1 class="cinzel-title" style="font-size: 2.2rem; margin: 6px 0;">BODA</h1>
+      
+      <div class="divisor-western">★</div>
 
-      <div class="section">
-        <p
-          style="
-            letter-spacing: 4px;
-            font-size: 0.8rem;
-            color: var(--leather);
-            text-transform: uppercase;
-          "
-        >
-          Los invitamos a nuestra
+      <h2 class="cinzel-title" style="font-size: 2.5rem; letter-spacing: 6px;">LUPITA</h2>
+      <div class="script-font">y</div>
+      <h2 class="cinzel-title" style="font-size: 2.5rem; letter-spacing: 6px;">FER</h2>
+
+      <p style="margin-top: 25px; font-size: 0.85rem; font-style: italic; color: #555; line-height: 1.6;">
+        "Nuestra felicidad solo está completa cuando la compartimos con las personas a las que amamos."
+      </p>
+    </div>
+
+    <!-- SECCIÓN: BENDICIÓN DE LOS PADRES -->
+    <div class="section" style="padding-top: 10px; padding-bottom: 20px;">
+      <div style="background: var(--card-white); border-radius: 14px; padding: 26px 20px; box-shadow: 0 4px 14px rgba(62, 39, 35, 0.05); border-top: 3px solid var(--sand-gold);">
+        
+        <p style="font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--leather); font-weight: 600; margin-bottom: 16px;">
+          Con la bendición de Dios y de nuestros padres
         </p>
-        <h1 class="cinzel-title" style="font-size: 2.2rem; margin: 6px 0">
-          BODA
-        </h1>
 
-        <div class="divisor-western">★</div>
-
-        <h2 class="cinzel-title" style="font-size: 2.5rem; letter-spacing: 6px">
-          LUPITA
-        </h2>
-        <div class="script-font">y</div>
-        <h2 class="cinzel-title" style="font-size: 2.5rem; letter-spacing: 6px">
-          FER
-        </h2>
-
-        <p
-          style="
-            margin-top: 25px;
-            font-size: 0.85rem;
-            font-style: italic;
-            color: #555;
-            line-height: 1.6;
-          "
-        >
-          "Nuestra felicidad solo está completa cuando la compartimos con las
-          personas a las que amamos."
+<!-- SECCIÓN: PADRES Y PADRINOS -->
+    <div class="section" style="padding-top: 10px; padding-bottom: 20px;">
+      <div style="background: var(--card-white); border-radius: 14px; padding: 26px 20px; box-shadow: 0 4px 14px rgba(62, 39, 35, 0.05); border-top: 3px solid var(--sand-gold);">
+        
+        <p style="font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase; color: var(--leather); font-weight: 600; margin-bottom: 16px;">
+          Con la bendición de Dios y de nuestras familias
         </p>
-      </div>
 
-      <!-- 3. Detalle fotográfico intermedio (Foto 2) -->
-      <div style="padding: 0 20px">
-        <img
-          src="2.jpeg"
-          alt="Momento Lupita y Fer"
-          style="
-            width: 100%;
-            height: 320px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-          "
-        />
-      </div>
-
-      <!-- 4. Contador de tiempo (Foto 3 como fondo) -->
-      <div class="countdown-section" style="margin-top: 35px">
-        <div class="countdown-overlay"></div>
-        <div class="countdown-content">
-          <p
-            style="
-              letter-spacing: 3px;
-              font-size: 0.75rem;
-              text-transform: uppercase;
-            "
-          >
-            El gran momento comienza en:
+        <!-- Padres de la Novia -->
+        <div style="margin-bottom: 16px;">
+          <p style="font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 2px; color: var(--sand-gold); font-weight: 600;">
+            PADRES DE LA NOVIA
           </p>
-          <div class="countdown-grid">
-            <div class="timer-card">
-              <div class="timer-num" id="dias">00</div>
-              <div class="timer-txt">Días</div>
-            </div>
-            <div class="timer-card">
-              <div class="timer-num" id="horas">00</div>
-              <div class="timer-txt">Hrs</div>
-            </div>
-            <div class="timer-card">
-              <div class="timer-num" id="min">00</div>
-              <div class="timer-txt">Min</div>
-            </div>
-            <div class="timer-card">
-              <div class="timer-num" id="seg">00</div>
-              <div class="timer-txt">Seg</div>
-            </div>
-          </div>
+          <p style="font-size: 0.95rem; font-weight: 500; color: var(--dark-text); margin-top: 4px;">
+            Miguel Ángel Rodríguez Ángeles
+          </p>
+          <p style="font-size: 0.95rem; font-weight: 500; color: var(--dark-text);">
+            Lucía Jacobo León
+          </p>
+        </div>
+
+        <div style="font-family: 'Great Vibes', cursive; font-size: 1.8rem; color: var(--sand-gold); line-height: 1; margin: 8px 0;">
+          &
+        </div>
+
+        <!-- Mamá del Novio -->
+        <div style="margin-bottom: 20px;">
+          <p style="font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 2px; color: var(--sand-gold); font-weight: 600;">
+            MAMÁ DEL NOVIO
+          </p>
+          <p style="font-size: 0.95rem; font-weight: 500; color: var(--dark-text); margin-top: 4px;">
+            Araceli Páramo Martínez
+          </p>
+        </div>
+
+        <div style="width: 40px; height: 1px; background: var(--sand-gold); margin: 16px auto; opacity: 0.7;"></div>
+
+        <!-- Padrinos de Velación -->
+        <div style="margin-top: 10px;">
+          <p style="font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 2px; color: var(--sand-gold); font-weight: 600;">
+            NUESTROS PADRINOS DE VELACIÓN
+          </p>
+          <p style="font-size: 0.95rem; font-weight: 500; color: var(--dark-text); margin-top: 4px;">
+            Pedro Pérez Páramo
+          </p>
+          <p style="font-size: 0.95rem; font-weight: 500; color: var(--dark-text);">
+            Leslie Martínez Chávez
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- 5. SAVE THE DATE LATERAL (Foto 2) -->
+    <div class="save-the-date-container">
+      <img src="2.jpeg" alt="Save the Date" class="std-foto">
+      <div class="std-lateral">
+        <div class="std-vertical-text">SAVE THE DATE</div>
+        <div class="std-numeros">
+          <div>28</div>
+          <div class="std-divider"></div>
+          <div>10</div>
         </div>
       </div>
+    </div>
 
-      <!-- 5. Itinerario y Ubicaciones -->
-      <div class="section">
-        <h3 class="cinzel-title" style="font-size: 1.4rem; margin-bottom: 24px">
-          Dónde & Cuándo
-        </h3>
+    <!-- 1. CALENDARIO VISUAL DE OCTUBRE 2026 -->
+    <div class="section" style="padding-top: 20px; padding-bottom: 25px;">
+      <p style="font-family: 'Cinzel', serif; letter-spacing: 3px; font-size: 0.85rem; margin-bottom: 12px; color: var(--leather);">OCTUBRE 2026</p>
+      
+      <div style="max-width: 320px; margin: 0 auto; background: #fff; padding: 18px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+        <div style="display: grid; grid-template-columns: repeat(7, 1fr); font-size: 0.7rem; font-weight: 600; color: #888; margin-bottom: 10px;">
+          <span>DOM</span><span>LUN</span><span>MAR</span><span>MIÉ</span><span>JUE</span><span>VIE</span><span>SÁB</span>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; font-size: 0.8rem; text-align: center; color: #444;">
+          <span></span><span></span><span></span><span></span><span>1</span><span>2</span><span>3</span>
+          <span>4</span><span>5</span><span>6</span><span>7</span><span>8</span><span>9</span><span>10</span>
+          <span>11</span><span>12</span><span>13</span><span>14</span><span>15</span><span>16</span><span>17</span>
+          <span>18</span><span>19</span><span>20</span><span>21</span><span>22</span><span>23</span><span>24</span>
+          <span>25</span><span>26</span><span>27</span>
+          <!-- Día 28 resaltado -->
+          <span style="background: var(--sand-gold); color: #fff; border-radius: 50%; font-weight: bold; display: flex; align-items: center; justify-content: center; width: 26px; height: 26px; margin: auto;">28</span>
+          <span>29</span><span>30</span><span>31</span>
+        </div>
+      </div>
+    </div>
 
+    <!-- CONTADOR REGRESIVO (Foto 3 como fondo) -->
+    <div class="countdown-section">
+      <div class="countdown-overlay"></div>
+      <div class="countdown-content">
+        <p style="letter-spacing: 3px; font-size: 0.75rem; text-transform: uppercase;">Faltan:</p>
+        <div class="countdown-grid">
+          <div class="timer-card"><div class="timer-num" id="dias">00</div><div class="timer-txt">Días</div></div>
+          <div class="timer-card"><div class="timer-num" id="horas">00</div><div class="timer-txt">Hrs</div></div>
+          <div class="timer-card"><div class="timer-num" id="min">00</div><div class="timer-txt">Min</div></div>
+          <div class="timer-card"><div class="timer-num" id="seg">00</div><div class="timer-txt">Seg</div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4. ITINERARIO CON ICONOS EN COLUMNA -->
+    <div class="section">
+      <h3 class="cinzel-title" style="font-size: 1.4rem; margin-bottom: 24px;">Dónde & Cuándo</h3>
+
+      <div class="timeline-container">
+        
         <!-- Ceremonia Religiosa -->
-        <div class="card-evento">
-          <p style="color: var(--sand-gold); font-size: 1.2rem">⛪</p>
-          <h4 class="cinzel-title" style="font-size: 1.05rem; margin-top: 6px">
-            Ceremonia Religiosa
-          </h4>
-          <p style="font-size: 0.9rem; margin-top: 6px; font-weight: 500">
-            Templo del Santo Niño de Cuamio
-          </p>
-          <p
-            style="
-              font-size: 1.1rem;
-              font-weight: 600;
-              color: var(--leather);
-              margin-top: 4px;
-            "
-          >
-            1:00 PM
-          </p>
-          <!-- Enlace listo con la búsqueda en Google Maps -->
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Templo+del+Santo+Niño+de+Cuamio+Michoacan"
-            target="_blank"
-            class="btn-maps"
-            >Ver Ubicación</a
-          >
+        <div class="timeline-item">
+          <div class="timeline-icon">⛪</div>
+          <div>
+            <p style="font-size: 0.75rem; letter-spacing: 2px; color: var(--leather); font-weight: 600;">1:00 PM</p>
+            <p style="font-size: 0.95rem; font-weight: 600;">Ceremonia Religiosa</p>
+            <p style="font-size: 0.75rem; color: #777;">Templo del Santo Niño de Cuamio</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Templo+del+Santo+Niño+de+Cuamio+Michoacan" target="_blank" class="btn-ubicacion">📍 Ver Ubicación</a>
+          </div>
         </div>
 
         <!-- Recepción -->
-        <div class="card-evento">
-          <p style="color: var(--sand-gold); font-size: 1.2rem">🥂</p>
-          <h4 class="cinzel-title" style="font-size: 1.05rem; margin-top: 6px">
-            Recepción
-          </h4>
-          <p style="font-size: 0.9rem; margin-top: 6px; font-weight: 500">
-            Salón El Premier
-          </p>
-          <p style="font-size: 0.8rem; color: #666; margin-top: 2px">
-            Lázaro Cárdenas s/n, Cuamio, Mich.
-          </p>
-          <p
-            style="
-              font-size: 1.1rem;
-              font-weight: 600;
-              color: var(--leather);
-              margin-top: 4px;
-            "
-          >
-            3:00 PM
-          </p>
-          <!-- Enlace listo para el salón en Maps -->
-          <a
-            href="https://www.google.com/maps/search/?api=1&query=Salon+El+Premier+Cuamio+Michoacan"
-            target="_blank"
-            class="btn-maps"
-            >Ver Ubicación</a
-          >
+        <div class="timeline-item">
+          <div class="timeline-icon">🥂</div>
+          <div>
+            <p style="font-size: 0.75rem; letter-spacing: 2px; color: var(--leather); font-weight: 600;">3:00 PM</p>
+            <p style="font-size: 0.95rem; font-weight: 600;">Recepción</p>
+            <p style="font-size: 0.75rem; color: #777;">Salón El Premier</p>
+            <a href="https://www.google.com/maps/search/?api=1&query=Salon+El+Premier+Cuamio+Michoacan" target="_blank" class="btn-ubicacion">📍 Ver Ubicación</a>
+          </div>
         </div>
-      </div>
 
-      <!-- 6. Código de Vestimenta -->
-      <div class="section" style="background: var(--light-sand)">
-        <h3 class="cinzel-title" style="font-size: 1.2rem">
-          Código de Vestimenta
-        </h3>
-        <p
-          style="
-            letter-spacing: 3px;
-            font-size: 0.85rem;
-            margin-top: 6px;
-            font-weight: 600;
-            color: var(--rustic-brown);
-          "
-        >
-          FORMAL VAQUERO
-        </p>
-
-        <p style="font-size: 0.75rem; color: #777; margin-top: 15px">
-          COLORES RESERVADOS PARA LA NOVIA:
-        </p>
-        <div class="color-swatches">
-          <div class="swatch" style="background: #ffffff" title="Blanco"></div>
-          <div class="swatch" style="background: #fbf6ee" title="Marfil"></div>
-          <div class="swatch" style="background: #eaddca" title="Beige"></div>
-        </div>
-        <p style="font-size: 0.75rem; color: #8d6e63; font-style: italic">
-          Por favor evitar tonos blancos y beige.
-        </p>
-      </div>
-
-      <!-- 7. Confirmación de Asistencia (Foto 4) -->
-      <div style="padding: 0 20px; margin-top: 30px">
-        <img
-          src="4.jpeg"
-          alt="Propuesta"
-          style="
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 12px;
-            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
-          "
-        />
-      </div>
-
-      <div class="section">
-        <div
-          class="script-font"
-          style="font-size: 2.8rem; color: var(--rustic-brown)"
-        >
-          ¡Te esperamos!
-        </div>
-        <p style="font-size: 0.85rem; color: #666; margin-top: 10px">
-          Para nosotros es muy importante tu compañía en este día tan especial.
-        </p>
-
-        <p
-          style="
-            font-size: 0.75rem;
-            letter-spacing: 2px;
-            color: var(--leather);
-            margin-top: 30px;
-          "
-        >
-          28 · OCTUBRE · 2026
-        </p>
       </div>
     </div>
 
-    <script>
-      const btnAbrir = document.getElementById("btn-abrir");
-      const sobreScreen = document.getElementById("sobre-screen");
-      const audio = document.getElementById("audio-novios");
-      const musicControl = document.getElementById("music-control");
+    <!-- 2. CARRUSEL DE FOTOS TÁCTIL -->
+    <div class="section" style="padding-top: 10px;">
+      <h3 class="cinzel-title" style="font-size: 1.2rem; margin-bottom: 18px;">Nuestra Historia</h3>
+      
+      <div class="carousel-container" id="carousel">
+        <div class="carousel-track" id="carousel-track">
+          <div class="carousel-slide"><img src="4.jpeg" alt="Foto 1"></div>
+          <div class="carousel-slide"><img src="1.jpeg" alt="Foto 2"></div>
+          <div class="carousel-slide"><img src="2.jpeg" alt="Foto 3"></div>
+          <div class="carousel-slide"><img src="3.jpeg" alt="Foto 4"></div>
+        </div>
+      </div>
+      
+      <!-- Puntos indicadores -->
+      <div class="carousel-dots" id="carousel-dots">
+        <span class="dot active" onclick="irASlide(0)"></span>
+        <span class="dot" onclick="irASlide(1)"></span>
+        <span class="dot" onclick="irASlide(2)"></span>
+        <span class="dot" onclick="irASlide(3)"></span>
+      </div>
+    </div>
 
-      // Apertura y música
-      btnAbrir.addEventListener("click", () => {
-        audio
-          .play()
-          .catch((err) => console.log("Audio waiting for user gesture"));
-        musicControl.style.display = "flex";
-        sobreScreen.style.opacity = "0";
-        sobreScreen.style.transform = "translateX(-50%) scale(0.95)";
-        setTimeout(() => {
-          sobreScreen.style.display = "none";
-        }, 900);
+    <!-- Código de Vestimenta -->
+    <div class="section" style="background: var(--light-sand);">
+      <h3 class="cinzel-title" style="font-size: 1.2rem;">Código de Vestimenta</h3>
+      <p style="letter-spacing: 3px; font-size: 0.85rem; margin-top: 6px; font-weight: 600; color: var(--rustic-brown);">FORMAL VAQUERO</p>
+      
+      <p style="font-size: 0.75rem; color: #777; margin-top: 15px;">COLORES RESERVADOS PARA LA NOVIA:</p>
+      <div class="color-swatches">
+        <div class="swatch" style="background: #ffffff;" title="Blanco"></div>
+        <div class="swatch" style="background: #fbf6ee;" title="Marfil"></div>
+        <div class="swatch" style="background: #eaddca;" title="Beige"></div>
+      </div>
+      <p style="font-size: 0.75rem; color: #8d6e63; font-style: italic;">Por favor evitar tonos blancos y beige.</p>
+    </div>
+
+    <!-- Despedida / Cierre -->
+    <div class="section">
+      <div class="script-font" style="font-size: 2.8rem; color: var(--rustic-brown);">¡Te esperamos!</div>
+      <p style="font-size: 0.75rem; letter-spacing: 3px; color: var(--leather); margin-top: 20px;">
+        28 · OCTUBRE · 2026
+      </p>
+      <p style="font-size: 0.75rem; color: #888; margin-top: 4px;">CUAMIO, MICHOACÁN</p>
+    </div>
+
+  </div>
+
+  <script>
+    // --- Apertura y Audio ---
+    const btnAbrir = document.getElementById('btn-abrir');
+    const sobreScreen = document.getElementById('sobre-screen');
+    const audio = document.getElementById('audio-novios');
+    const musicControl = document.getElementById('music-control');
+
+    btnAbrir.addEventListener('click', () => {
+      audio.play().catch(err => console.log("Audio requiere interacción"));
+      musicControl.style.display = 'flex';
+      sobreScreen.style.opacity = '0';
+      sobreScreen.style.transform = 'translateX(-50%) scale(0.95)';
+      setTimeout(() => {
+        sobreScreen.style.display = 'none';
+      }, 900);
+    });
+
+    musicControl.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        musicControl.innerText = '🎵';
+      } else {
+        audio.pause();
+        musicControl.innerText = '🔇';
+      }
+    });
+
+    // --- Contador Regresivo ---
+    const fechaEvento = new Date('2026-10-28T13:00:00').getTime();
+
+    function actualizarContador() {
+      const ahora = new Date().getTime();
+      const diff = fechaEvento - ahora;
+
+      if (diff > 0) {
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        document.getElementById('dias').innerText = d < 10 ? '0' + d : d;
+        document.getElementById('horas').innerText = h < 10 ? '0' + h : h;
+        document.getElementById('min').innerText = m < 10 ? '0' + m : m;
+        document.getElementById('seg').innerText = s < 10 ? '0' + s : s;
+      }
+    }
+    setInterval(actualizarContador, 1000);
+    actualizarContador();
+
+    // --- Lógica del Carrusel Táctil ---
+    const track = document.getElementById('carousel-track');
+    const dots = document.querySelectorAll('.dot');
+    let currentIndex = 0;
+    const totalSlides = dots.length;
+
+    function irASlide(index) {
+      currentIndex = index;
+      track.style.transform = `translateX(-${currentIndex * 100}%)`;
+      dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentIndex);
       });
+    }
 
-      // Control flotante de audio
-      musicControl.addEventListener("click", () => {
-        if (audio.paused) {
-          audio.play();
-          musicControl.innerText = "🎵";
-        } else {
-          audio.pause();
-          musicControl.innerText = "🔇";
-        }
-      });
+    // Soporte para gestos táctiles (Swipe en móvil)
+    let startX = 0;
+    let endX = 0;
+    const carouselElem = document.getElementById('carousel');
 
-      // Lógica del contador regresivo hacia el 28 de Octubre de 2026 a la 1:00 PM
-      const fechaEvento = new Date("2026-10-28T13:00:00").getTime();
+    carouselElem.addEventListener('touchstart', e => {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
 
-      function actualizarContador() {
-        const ahora = new Date().getTime();
-        const diff = fechaEvento - ahora;
+    carouselElem.addEventListener('touchend', e => {
+      endX = e.changedTouches[0].clientX;
+      handleSwipe();
+    }, { passive: true });
 
-        if (diff > 0) {
-          const d = Math.floor(diff / (1000 * 60 * 60 * 24));
-          const h = Math.floor(
-            (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
-          );
-          const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-          const s = Math.floor((diff % (1000 * 60)) / 1000);
-
-          document.getElementById("dias").innerText = d < 10 ? "0" + d : d;
-          document.getElementById("horas").innerText = h < 10 ? "0" + h : h;
-          document.getElementById("min").innerText = m < 10 ? "0" + m : m;
-          document.getElementById("seg").innerText = s < 10 ? "0" + s : s;
+    function handleSwipe() {
+      const diff = startX - endX;
+      if (Math.abs(diff) > 40) {
+        if (diff > 0 && currentIndex < totalSlides - 1) {
+          irASlide(currentIndex + 1); // Deslizar a la izquierda
+        } else if (diff < 0 && currentIndex > 0) {
+          irASlide(currentIndex - 1); // Deslizar a la derecha
         }
       }
-
-      setInterval(actualizarContador, 1000);
-      actualizarContador();
-    </script>
-  </body>
+    }
+  </script>
+</body>
 </html>
