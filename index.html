@@ -1,0 +1,598 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boda Lupita & Fer | 28.10.2026</title>
+
+    <!-- Tipografías elegantes y estilo western refinado -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Great+Vibes&family=Montserrat:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Open Graph para vista previa en WhatsApp y redes -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="¡Nuestra Boda! Lupita & Fer" />
+    <meta
+      property="og:description"
+      content="28 de Octubre, 2026. Acompáñanos a celebrar este día tan especial."
+    />
+    <meta
+      property="og:image"
+      content="https://tu-sitio.netlify.app/fotos/1.jpeg"
+    />
+    <meta property="og:url" content="https://tu-sitio.netlify.app" />
+
+    <style>
+      :root {
+        --bg-cream: #f9f6f0;
+        --card-white: #ffffff;
+        --rustic-brown: #3e2723;
+        --leather: #8d6e63;
+        --sand-gold: #c5a059;
+        --light-sand: #f0ebe1;
+        --dark-text: #2c2523;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background-color: #2b2624;
+        font-family: "Montserrat", sans-serif;
+        color: var(--dark-text);
+        display: flex;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      /* Contenedor formato móvil */
+      .mobile-wrapper {
+        width: 100%;
+        max-width: 480px;
+        background-color: var(--bg-cream);
+        box-shadow: 0 0 35px rgba(0, 0, 0, 0.5);
+        position: relative;
+        overflow-x: hidden;
+        min-height: 100vh;
+      }
+
+      /* PANTALLA INICIAL (Sobre vaquero / Sello) */
+      #sobre-screen {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        max-width: 480px;
+        height: 100vh;
+        background: radial-gradient(circle, #f3ece1 0%, #e2d7c5 100%);
+        z-index: 1000;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 30px;
+        transition: all 0.9s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      .sobre-monograma {
+        font-family: "Cinzel", serif;
+        font-size: 3.8rem;
+        letter-spacing: 6px;
+        color: var(--rustic-brown);
+        margin-bottom: 5px;
+      }
+
+      .sobre-star {
+        color: var(--sand-gold);
+        font-size: 1.5rem;
+        margin-bottom: 15px;
+      }
+
+      .sobre-fecha {
+        font-size: 0.9rem;
+        letter-spacing: 4px;
+        color: var(--leather);
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-bottom: 35px;
+      }
+
+      .btn-abrir {
+        background: linear-gradient(135deg, #a07855, #6d4c41);
+        color: #fff;
+        border: none;
+        padding: 15px 36px;
+        font-size: 0.85rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        border-radius: 30px;
+        cursor: pointer;
+        box-shadow: 0 6px 16px rgba(109, 76, 65, 0.35);
+        transition: transform 0.2s ease;
+      }
+
+      .btn-abrir:active {
+        transform: scale(0.96);
+      }
+
+      /* BOTÓN FLOTANTE DE MÚSICA */
+      #music-control {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background: rgba(255, 255, 255, 0.9);
+        border: 1px solid var(--sand-gold);
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 900;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        font-size: 1.1rem;
+      }
+
+      /* IMÁGENES & ESTILO */
+      .foto-cover {
+        width: 100%;
+        height: 430px;
+        object-fit: cover;
+        display: block;
+        mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+        -webkit-mask-image: linear-gradient(
+          to bottom,
+          black 85%,
+          transparent 100%
+        );
+      }
+
+      .section {
+        padding: 38px 24px;
+        text-align: center;
+        position: relative;
+      }
+
+      .cinzel-title {
+        font-family: "Cinzel", serif;
+        letter-spacing: 4px;
+        color: var(--rustic-brown);
+        text-transform: uppercase;
+        font-weight: 600;
+      }
+
+      .script-font {
+        font-family: "Great Vibes", cursive;
+        font-size: 2.3rem;
+        color: var(--sand-gold);
+        margin: 4px 0;
+      }
+
+      .divisor-western {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        margin: 18px auto;
+        color: var(--sand-gold);
+      }
+      .divisor-western::before,
+      .divisor-western::after {
+        content: "";
+        width: 50px;
+        height: 1px;
+        background: var(--sand-gold);
+      }
+
+      /* SECCIÓN CONTADOR (Con Foto 3) */
+      .countdown-section {
+        position: relative;
+        background: url("3.jpeg") center/cover no-repeat;
+        padding: 60px 20px;
+        color: #fff;
+        text-align: center;
+      }
+
+      .countdown-overlay {
+        position: absolute;
+        inset: 0;
+        background: rgba(30, 20, 15, 0.65);
+      }
+
+      .countdown-content {
+        position: relative;
+        z-index: 2;
+      }
+
+      .countdown-grid {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+
+      .timer-card {
+        background: rgba(255, 255, 255, 0.15);
+        backdrop-filter: blur(6px);
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 12px 10px;
+        border-radius: 10px;
+        min-width: 65px;
+      }
+
+      .timer-num {
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-family: "Cinzel", serif;
+      }
+
+      .timer-txt {
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        opacity: 0.85;
+      }
+
+      /* TARJETAS DE DETALLES */
+      .card-evento {
+        background: var(--card-white);
+        border-radius: 14px;
+        padding: 24px;
+        margin-bottom: 22px;
+        box-shadow: 0 4px 14px rgba(62, 39, 35, 0.06);
+        border-top: 3px solid var(--sand-gold);
+      }
+
+      .btn-maps {
+        display: inline-block;
+        margin-top: 14px;
+        padding: 9px 24px;
+        background: transparent;
+        color: var(--leather);
+        border: 1.5px solid var(--leather);
+        text-decoration: none;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: 600;
+        transition: all 0.2s;
+      }
+
+      .btn-maps:hover {
+        background: var(--leather);
+        color: #fff;
+      }
+
+      /* CÓDIGO DE VESTIMENTA */
+      .color-swatches {
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin: 15px 0;
+      }
+      .swatch {
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        border: 2px solid #ddd;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Botón de música flotante -->
+    <div id="music-control" style="display: none" title="Pausar/Reproducir">
+      🎵
+    </div>
+
+    <div class="mobile-wrapper">
+      <!-- 1. Pantalla del Sobre inicial -->
+      <div id="sobre-screen">
+        <div class="sobre-monograma">L & F</div>
+        <div class="sobre-star">★</div>
+        <p class="sobre-fecha">28 · OCTUBRE · 2026</p>
+        <button class="btn-abrir" id="btn-abrir">Abrir Invitación</button>
+      </div>
+
+      <!-- Audio -->
+      <audio id="audio-novios" loop>
+        <source src="cancion.mp3" type="audio/mp3" />
+      </audio>
+
+      <!-- 2. Portada (Foto 1) -->
+      <img
+        src="1.jpeg"
+        alt="Lupita y Fer"
+        class="foto-cover"
+      />
+
+      <div class="section">
+        <p
+          style="
+            letter-spacing: 4px;
+            font-size: 0.8rem;
+            color: var(--leather);
+            text-transform: uppercase;
+          "
+        >
+          Los invitamos a nuestra
+        </p>
+        <h1 class="cinzel-title" style="font-size: 2.2rem; margin: 6px 0">
+          BODA
+        </h1>
+
+        <div class="divisor-western">★</div>
+
+        <h2 class="cinzel-title" style="font-size: 2.5rem; letter-spacing: 6px">
+          LUPITA
+        </h2>
+        <div class="script-font">y</div>
+        <h2 class="cinzel-title" style="font-size: 2.5rem; letter-spacing: 6px">
+          FER
+        </h2>
+
+        <p
+          style="
+            margin-top: 25px;
+            font-size: 0.85rem;
+            font-style: italic;
+            color: #555;
+            line-height: 1.6;
+          "
+        >
+          "Nuestra felicidad solo está completa cuando la compartimos con las
+          personas a las que amamos."
+        </p>
+      </div>
+
+      <!-- 3. Detalle fotográfico intermedio (Foto 2) -->
+      <div style="padding: 0 20px">
+        <img
+          src="2.jpeg"
+          alt="Momento Lupita y Fer"
+          style="
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+          "
+        />
+      </div>
+
+      <!-- 4. Contador de tiempo (Foto 3 como fondo) -->
+      <div class="countdown-section" style="margin-top: 35px">
+        <div class="countdown-overlay"></div>
+        <div class="countdown-content">
+          <p
+            style="
+              letter-spacing: 3px;
+              font-size: 0.75rem;
+              text-transform: uppercase;
+            "
+          >
+            El gran momento comienza en:
+          </p>
+          <div class="countdown-grid">
+            <div class="timer-card">
+              <div class="timer-num" id="dias">00</div>
+              <div class="timer-txt">Días</div>
+            </div>
+            <div class="timer-card">
+              <div class="timer-num" id="horas">00</div>
+              <div class="timer-txt">Hrs</div>
+            </div>
+            <div class="timer-card">
+              <div class="timer-num" id="min">00</div>
+              <div class="timer-txt">Min</div>
+            </div>
+            <div class="timer-card">
+              <div class="timer-num" id="seg">00</div>
+              <div class="timer-txt">Seg</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 5. Itinerario y Ubicaciones -->
+      <div class="section">
+        <h3 class="cinzel-title" style="font-size: 1.4rem; margin-bottom: 24px">
+          Dónde & Cuándo
+        </h3>
+
+        <!-- Ceremonia Religiosa -->
+        <div class="card-evento">
+          <p style="color: var(--sand-gold); font-size: 1.2rem">⛪</p>
+          <h4 class="cinzel-title" style="font-size: 1.05rem; margin-top: 6px">
+            Ceremonia Religiosa
+          </h4>
+          <p style="font-size: 0.9rem; margin-top: 6px; font-weight: 500">
+            Templo del Santo Niño de Cuamio
+          </p>
+          <p
+            style="
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: var(--leather);
+              margin-top: 4px;
+            "
+          >
+            1:00 PM
+          </p>
+          <!-- Enlace listo con la búsqueda en Google Maps -->
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Templo+del+Santo+Niño+de+Cuamio+Michoacan"
+            target="_blank"
+            class="btn-maps"
+            >Ver Ubicación</a
+          >
+        </div>
+
+        <!-- Recepción -->
+        <div class="card-evento">
+          <p style="color: var(--sand-gold); font-size: 1.2rem">🥂</p>
+          <h4 class="cinzel-title" style="font-size: 1.05rem; margin-top: 6px">
+            Recepción
+          </h4>
+          <p style="font-size: 0.9rem; margin-top: 6px; font-weight: 500">
+            Salón El Premier
+          </p>
+          <p style="font-size: 0.8rem; color: #666; margin-top: 2px">
+            Lázaro Cárdenas s/n, Cuamio, Mich.
+          </p>
+          <p
+            style="
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: var(--leather);
+              margin-top: 4px;
+            "
+          >
+            3:00 PM
+          </p>
+          <!-- Enlace listo para el salón en Maps -->
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=Salon+El+Premier+Cuamio+Michoacan"
+            target="_blank"
+            class="btn-maps"
+            >Ver Ubicación</a
+          >
+        </div>
+      </div>
+
+      <!-- 6. Código de Vestimenta -->
+      <div class="section" style="background: var(--light-sand)">
+        <h3 class="cinzel-title" style="font-size: 1.2rem">
+          Código de Vestimenta
+        </h3>
+        <p
+          style="
+            letter-spacing: 3px;
+            font-size: 0.85rem;
+            margin-top: 6px;
+            font-weight: 600;
+            color: var(--rustic-brown);
+          "
+        >
+          FORMAL VAQUERO
+        </p>
+
+        <p style="font-size: 0.75rem; color: #777; margin-top: 15px">
+          COLORES RESERVADOS PARA LA NOVIA:
+        </p>
+        <div class="color-swatches">
+          <div class="swatch" style="background: #ffffff" title="Blanco"></div>
+          <div class="swatch" style="background: #fbf6ee" title="Marfil"></div>
+          <div class="swatch" style="background: #eaddca" title="Beige"></div>
+        </div>
+        <p style="font-size: 0.75rem; color: #8d6e63; font-style: italic">
+          Por favor evitar tonos blancos y beige.
+        </p>
+      </div>
+
+      <!-- 7. Confirmación de Asistencia (Foto 4) -->
+      <div style="padding: 0 20px; margin-top: 30px">
+        <img
+          src="4.jpeg"
+          alt="Propuesta"
+          style="
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+          "
+        />
+      </div>
+
+      <div class="section">
+        <div
+          class="script-font"
+          style="font-size: 2.8rem; color: var(--rustic-brown)"
+        >
+          ¡Te esperamos!
+        </div>
+        <p style="font-size: 0.85rem; color: #666; margin-top: 10px">
+          Para nosotros es muy importante tu compañía en este día tan especial.
+        </p>
+
+        <p
+          style="
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            color: var(--leather);
+            margin-top: 30px;
+          "
+        >
+          28 · OCTUBRE · 2026
+        </p>
+      </div>
+    </div>
+
+    <script>
+      const btnAbrir = document.getElementById("btn-abrir");
+      const sobreScreen = document.getElementById("sobre-screen");
+      const audio = document.getElementById("audio-novios");
+      const musicControl = document.getElementById("music-control");
+
+      // Apertura y música
+      btnAbrir.addEventListener("click", () => {
+        audio
+          .play()
+          .catch((err) => console.log("Audio waiting for user gesture"));
+        musicControl.style.display = "flex";
+        sobreScreen.style.opacity = "0";
+        sobreScreen.style.transform = "translateX(-50%) scale(0.95)";
+        setTimeout(() => {
+          sobreScreen.style.display = "none";
+        }, 900);
+      });
+
+      // Control flotante de audio
+      musicControl.addEventListener("click", () => {
+        if (audio.paused) {
+          audio.play();
+          musicControl.innerText = "🎵";
+        } else {
+          audio.pause();
+          musicControl.innerText = "🔇";
+        }
+      });
+
+      // Lógica del contador regresivo hacia el 28 de Octubre de 2026 a la 1:00 PM
+      const fechaEvento = new Date("2026-10-28T13:00:00").getTime();
+
+      function actualizarContador() {
+        const ahora = new Date().getTime();
+        const diff = fechaEvento - ahora;
+
+        if (diff > 0) {
+          const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+          const h = Math.floor(
+            (diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60),
+          );
+          const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+          const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+          document.getElementById("dias").innerText = d < 10 ? "0" + d : d;
+          document.getElementById("horas").innerText = h < 10 ? "0" + h : h;
+          document.getElementById("min").innerText = m < 10 ? "0" + m : m;
+          document.getElementById("seg").innerText = s < 10 ? "0" + s : s;
+        }
+      }
+
+      setInterval(actualizarContador, 1000);
+      actualizarContador();
+    </script>
+  </body>
+</html>
